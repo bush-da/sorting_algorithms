@@ -1,5 +1,21 @@
 #include "sort.h"
 
+
+/**
+ * swap - swap two integers
+ * @a1: The first integer to swap
+ * @a2: The second integer to swap
+ */
+
+void swap(int *a1, int *a2)
+{
+	int temp;
+
+	temp = *a1;
+	*a1 = *a2;
+	*a2 = temp;
+}
+
 /**
  * bubble_sort - sort numbers using bubble sort algorithm
  * @array: array of number to be sorted
@@ -9,7 +25,7 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, len, temp;
+	size_t i, len;
 	int flag;
 
 	if (array == NULL || size < 2)
@@ -27,9 +43,7 @@ void bubble_sort(int *array, size_t size)
 			{
 
 				flag = 1;
-				temp = array[i + 1];
-				array[i + 1] = array[i];
-				array[i] = temp;
+				swap(array + i + 1, array + i);
 				print_array(array, size);
 			}
 		}
