@@ -4,8 +4,8 @@
  * swap - swap two integers
  * @a1: The first integer to swap
  * @a2: The second integer to swap
+ * Return: void
  */
-
 void swap(int *a1, int *a2)
 {
 	int temp;
@@ -14,7 +14,6 @@ void swap(int *a1, int *a2)
 	*a1 = *a2;
 	*a2 = temp;
 }
-
 /**
  * bubble_sort - sort numbers using bubble sort algorithm
  * @array: array of number to be sorted
