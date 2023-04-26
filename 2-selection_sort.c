@@ -27,6 +27,7 @@ void swap(int *a, int *b)
 void selection_sort(int *array, size_t size)
 {
 	size_t i, j, min_index;
+	int flag;
 
 	i = 0;
 	while (i < size)
@@ -38,11 +39,14 @@ void selection_sort(int *array, size_t size)
 			if (array[min_index] > array[j])
 			{
 				min_index = j;
+				flag = 1;
 			}
 			j++;
 		}
 		swap(array + i, array + min_index);
-		print_array(array, size);
+		if (flag == 1)
+			print_array(array, size);
+		flag = 0;
 		i++;
 	}
 }
