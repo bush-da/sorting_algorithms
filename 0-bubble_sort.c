@@ -14,13 +14,13 @@ void swap(int *a1, int *a2)
 	*a1 = *a2;
 	*a2 = temp;
 }
+
 /**
  * bubble_sort - sort numbers using bubble sort algorithm
  * @array: array of number to be sorted
  * @size: the size of array
  * Return: void
  */
-
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, len;
